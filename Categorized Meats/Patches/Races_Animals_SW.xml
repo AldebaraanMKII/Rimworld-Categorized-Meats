@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change StarWars Animal Collection -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>StarWars Animal Collection</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+<!-- Reptile -->
+
+   <li Class="PatchOperationRemove">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Wampa" 
+	  ]/race/meatLabel</xpath>
+   </li>
+
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Dewback" or
+	  	  defName="Rancor" or
+	  	  defName="Acklay" or
+	  	  defName="Tauntaun" or
+	  	  defName="KraytDragon" or
+	  	  defName="Wampa" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Beef -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bantha" or
+	  	  defName="Reek" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cow</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Feline -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Nexu" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Goat -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Nerf" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Goat</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	</operations>
+	</match>
+</Operation>
+
+
+</Patch>

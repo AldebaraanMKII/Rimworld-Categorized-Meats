@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Megafauna -->
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Megafauna</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+	
+<!-- Pork -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Daeodon"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Pig</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	
+<!-- Primate -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Gigantopithecus" or -->
+	  	  <!-- defName="Dinopithecus"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Monkey</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	
+<!-- Rhino -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Uintatherium" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Rhinoceros</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	
+<!-- Bird -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Titanis" or -->
+	  	  <!-- defName="Dinornis" or -->
+	  	  <!-- defName="Palaeeudyptes"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Cassowary</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	
+<!-- Reptile -->
+   <li Class="PatchOperationRemove">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Titanoboa" or
+	  	  defName="Megalania" or
+	  	  defName="Quinkana" 
+	  ]/race/meatLabel</xpath>
+   </li>
+   
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Gigantophis" or
+	  	  defName="Purussaurus" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Titanoboa" or
+	  	  defName="Megalania" or
+	  	  defName="Quinkana" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	
+<!-- Elephant -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="WoollyMammoth" or -->
+	  	  <!-- defName="Deinotherium" or -->
+	  	  <!-- defName="Zygolophodon" or -->
+	  	  <!-- defName="Platybelodon"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Elephant</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	
+<!-- Feline -->
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Smilodon" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Horse -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Chalicotherium" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Horse</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	
+<!-- Venison -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Megaloceros"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Deer</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+<!-- Beef -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Aurochs"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Cow</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+
+	
+	
+<!-- Rodent -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Josephoartigasia"
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>GuineaPig</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Bear -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="ShortfacedBear"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Bear_Grizzly</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Vanilla Animals Expanded — Boreal Forest -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Animals Expanded — Boreal Forest</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Canine -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AEXP_ArcticCoyote" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Wolf_Timber</useMeatFrom>
+      </value>
+   </li>
+	
+
+<!-- Bear -->
+   <!-- <li Class="PatchOperationReplace"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="AEXP_BlackBear"  -->
+	  <!-- ]/race/useMeatFrom</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Bear_Grizzly</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

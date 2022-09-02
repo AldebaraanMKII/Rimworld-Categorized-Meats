@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change StarWars Animal Collection -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Bastyon</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Reptile -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bast_Chem_Tegu" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Feline -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bast_Blazing_Felidae" or
+	  	  defName="Bast_Ethereal_Lion" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Rhino -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bast_Ceratok" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Rhinoceros</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Venison -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bast_Gleaming_Cervus" or
+	  	  defName="Bast_Scire" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Deer</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Canine -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bast_Soul_Eater" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Wolf_Timber</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Hare -->
+   <li Class="PatchOperationRemove">
+	  <success>Always</success>
+      <xpath>/Defs/ThingDef[
+	        defName = "Bast_Vorpal_Bunny" or
+	        defName = "Bast_Vorpal_Bunny_Befouled" or
+	        defName = "Bast_Vorpal_Bunny_Enduring" or
+	        defName = "Bast_Vorpal_Bunny_Enraged" or
+	        defName = "Bast_Vorpal_Bunny_Gilded" or
+	        defName = "Bast_Vorpal_Bunny_Iridescent" or
+	        defName = "Bast_Vorpal_Bunny_Pragmatic" 
+		]/race/meatLabel</xpath> 
+   </li>
+   
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Bast_Vorpal_Bunny" or
+	  	  defName="Bast_Vorpal_Bunny_Befouled" or
+	  	  defName="Bast_Vorpal_Bunny_Enduring" or
+	  	  defName="Bast_Vorpal_Bunny_Enraged" or
+	  	  defName="Bast_Vorpal_Bunny_Gilded" or
+	  	  defName="Bast_Vorpal_Bunny_Iridescent" or
+	  	  defName="Bast_Vorpal_Bunny_Pragmatic" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Hare</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

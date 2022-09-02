@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change RimBeast (Continued) -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>RimBeast (Continued)</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Reptile -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="FTurtle" or
+	  	  defName="FRaptor" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

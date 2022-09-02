@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Vanilla Animals Expanded — Desert -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Animals Expanded — Desert</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Reptile -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AEXP_GilaMonster" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+
+<!-- Feline -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AEXP_Lion" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

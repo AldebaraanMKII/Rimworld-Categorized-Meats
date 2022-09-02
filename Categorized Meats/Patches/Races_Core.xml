@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs</xpath>
+		<value>
+			<ThingDef>
+				<defName>Meat_Squirrel</defName>
+				<label>squirrel meat</label>
+				<description>This is a dummy item that you should never see in-game but must remain in the database, because apparently squirrel meat acts as the glue keeping rimworld together.</description>
+				<thingClass>Thing</thingClass>
+				<resourceReadoutPriority>Middle</resourceReadoutPriority>
+				<statBases>
+					<MarketValue>0</MarketValue>
+				</statBases>
+				<menuHidden>true</menuHidden>
+				<tradeability>None</tradeability>
+			</ThingDef>
+		</value>
+	</Operation>
+
+<!-- Change Core Game Animals -->
+<!-- Canine -->
+   <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "Wolf_Timber"]/race/meatLabel</xpath> <!-- Remove wolf meat and make it Canine meat -->
+      <value>
+         <meatLabel>canine meat</meatLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Warg" or
+	  	  defName="YorkshireTerrier" or
+	  	  defName="Husky" or
+	  	  defName="LabradorRetriever" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Wolf_Timber</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Venison -->
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Gazelle" or
+	  	  defName="Elk" or
+	  	  defName="Caribou" or
+	  	  defName="Boomalope" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Deer</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Mutton/Sheep -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "Sheep"]/race</xpath>
+      <value>
+         <meatLabel>mutton</meatLabel>
+      </value>
+   </Operation>
+
+
+
+<!-- Goat -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "Goat"]/race</xpath> 
+      <value>
+         <meatLabel>goat meat</meatLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[
+	  defName = "Ibex"
+	  ]/race</xpath> 
+      <value>
+        <useMeatFrom>Goat</useMeatFrom> 
+      </value> 
+   </Operation>
+
+
+
+
+<!-- Reptile -->
+   <Operation Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName = "Cobra"]/race/meatLabel</xpath> 
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "Tortoise"]/race</xpath> 
+      <value>
+         <meatLabel>reptile meat</meatLabel>
+      </value>
+   </Operation>
+   
+    <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[ 
+	  	  defName="Iguana" or 
+	  	  defName="Cobra" 
+	  ]/race</xpath> 
+     <value>
+          <useMeatFrom>Tortoise</useMeatFrom> 
+       </value> 
+    </Operation> 
+
+
+<!-- Hare -->
+
+<!-- Poultry -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "Chicken"]/race</xpath> 
+      <value>
+         <meatLabel>poultry meat</meatLabel>
+      </value>
+   </Operation>
+   
+	  	  <!-- defName="Goose" or -->
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Duck" or
+	  	  defName="Turkey" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Chicken</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Beef -->
+   <Operation Class="PatchOperationRemove">
+      <xpath>/Defs/ThingDef[defName = "Yak"]/race/meatLabel</xpath> 
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Muffalo" or
+	  	  defName="Bison" or
+	  	  defName="Yak" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cow</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Camelid -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "Alpaca"]/race</xpath> 
+      <value>
+         <meatLabel>camelid meat</meatLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Dromedary" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Alpaca</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Equine -->
+   <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "Horse"]/race/meatLabel</xpath> 
+      <value>
+         <meatLabel>equine meat</meatLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Donkey" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Horse</useMeatFrom>
+      </value>
+   </Operation>
+
+
+
+<!-- Rodent -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "GuineaPig"]/race</xpath> 
+      <value>
+         <meatLabel>rodent meat</meatLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Squirrel" or 
+	  	  defName="Alphabeaver" or
+	  	  defName="Capybara" or
+	  	  defName="Chinchilla" or
+	  	  defName="Boomrat" or
+	  	  defName="Rat" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>GuineaPig</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Feline -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[
+	  defName = "BigCatThingBase"
+	  ]/race</xpath> 
+      <value>
+         <meatLabel>feline meat</meatLabel>
+      </value>
+   </Operation>
+   
+   <Operation Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Panther" or
+	  	  defName="Lynx" or
+	  	  defName="Cat" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </Operation>
+
+
+<!-- Primate -->
+   <Operation Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "Monkey"]/race</xpath> 
+      <value>
+         <meatLabel>primate meat</meatLabel>
+      </value>
+   </Operation>
+   
+
+
+
+
+
+
+</Patch>

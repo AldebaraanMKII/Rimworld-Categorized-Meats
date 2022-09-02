@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Megafauna</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+<!-- Fox -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+		defName="AA_AnimusVox"
+		]/race</xpath>
+		<value>
+			<useMeatFrom>Fox_Fennec</useMeatFrom>
+		</value>
+	</li>
+		
+	    <!-- defName="AA_CrystallineCaracal" or -->
+<!-- Feline -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	    defName="AA_ArcticLion" or
+	    defName="AA_PhoenixOwlcat" or
+	    defName="AA_SandLion"
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>Cougar</useMeatFrom>
+		</value>
+	</li>
+		
+
+		
+		
+<!-- Beef -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	    defName="AA_ChameleonYak" or
+	    defName="gigantelope" 
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>Cow</useMeatFrom>
+		</value>
+	</li>
+
+
+
+<!-- Reptile -->
+	<li Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_RoughPlatedMonitor" 
+		]/race/meatLabel</xpath>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_CrescendoAnole" or
+	  	  defName="AA_Erin" or
+	  	  defName="AA_RayHound" 
+		]/race/useMeatFrom</xpath>
+		<value>
+		  <useMeatFrom>Tortoise</useMeatFrom>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_DecayDrake" or
+	  	  defName="AA_Lockjaw" or
+	  	  defName="AA_Razorjack" or
+	  	  defName="AA_RoughPlatedMonitor" 
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>Tortoise</useMeatFrom>
+		</value>
+	</li>
+
+
+
+<!-- Bird -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_DesertAve" or
+	  	  defName="AA_FrostAve" or
+	  	  defName="AA_MeadowAve" or
+	  	  defName="AA_RoyalAve" or
+	  	  defName="AA_NightAve" 
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>Cassowary</useMeatFrom>
+		</value>
+	</li>
+
+
+
+<!-- Mutton -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_DevilSheep"
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>Sheep</useMeatFrom>
+		</value>
+	</li>
+
+
+
+<!-- Rodent -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_DuskRat" or
+	  	  defName="AA_FissionMouse" or
+	  	  defName="AA_Groundrunner" 
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>GuineaPig</useMeatFrom>
+		</value>
+	</li>
+
+
+
+<!-- Insect -->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_Metallovore" or
+	  	  defName="AA_Swarmling" 
+		]/race</xpath>
+		<value>
+		  <useMeatFrom>Megaspider</useMeatFrom>
+		</value>
+	</li>
+
+
+
+<!-- Hare -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AA_Radyak" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Hare</useMeatFrom>
+      </value>
+   </li>
+
+
+
+<!-- Canine -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AA_RipperHound" or
+	  	  defName="AA_Nightling" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Wolf_Timber</useMeatFrom>
+      </value>
+   </li>
+   
+
+
+<!-- Goat -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AA_ShockGoat" or
+	  	  defName="AA_SpinedGow" or
+	  	  defName="AA_NightRam" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Goat</useMeatFrom>
+      </value>
+   </li>
+   
+
+
+<!-- Equine -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AA_NightMule" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Horse</useMeatFrom>
+      </value>
+   </li>
+
+
+<!-- Pork -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="AA_Thunderbeast"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Pig</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+   
+	</operations>
+	</match>
+</Operation>
+</Patch>

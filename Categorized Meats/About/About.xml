@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+	<name>Categorized Meats</name>
+	<author>Tutankhamun</author>
+	<url>n/a</url>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+		<li>1.2</li>
+		<li>1.3</li>
+	</supportedVersions>
+	<packageId>tutankhamun.categorizedmeats</packageId>
+   	 <loadAfter>
+       		<li>Ludeon.RimWorld</li>
+        	<li>Ludeon.RimWorld.Royalty</li>
+			<li>sarg.alphaanimals</li>
+			<li>scurvyez.bastyon</li>
+			<li>averythekitty.devilstrandanimals</li>
+			<li>spincrus.dinosauria</li>
+			<li>erin.mountain</li>
+			<li>spoonshortage.galaxylife.1.1</li>
+			<li>sarg.magicalmenagerie</li>
+			<li>spino.megafauna</li>
+			<li>mlie.rimbeast</li>
+			<li>ryflamer.rimcraft.core</li>
+			<li>ryflamer.rimcraft.alliedraces</li>
+			<li>ryflamer.rimcraft.animals</li>
+			<li>vanillaexpanded.vaebf</li>
+			<li>vanillaexpanded.vaed</li>
+			<li>vanillaexpanded.vaetr</li>
+			<li>forsakens.fauna</li>
+    	</loadAfter>
+	<description>
+	    Simplifies meat types. Instead of having 100+ meat types cluttering the game and decreasing performance, the meats were categorized.
+
+		Meat categories: 
+          Feline
+          Canine
+          Fox
+          Elephant
+          Rhinocheros
+          Bear
+          Lizard
+          Rodent
+          Equine
+          Bird
+          Venison
+          Pork
+          Beef
+          Mutton (Sheep)
+          Goat
+          Poultry
+          Hare
+          Primate
+		  Human
+		  Elf (Rimcraft)
+		  Insect
+		  
+		Mods supported:  
+		  Alpha Animals
+		  Bastyon
+		  Devilstrand Animals
+		  Dinosauria
+		  Erin's Mountain Animals
+		  Forsakens: Fauna
+		  Galaxy Life
+		  Magical Menagerie
+		  Megafauna
+		  RimBeast
+		  Rimcraft
+		  Rimcraft Allied Races
+		  Rimcraft Animals
+		  Star Wars Animals Collection
+		  Vanilla Animals Expanded — Boreal Forest 
+		  Vanilla Animals Expanded — Desert
+		  Vanilla Animals Expanded — Cats and Dogs
+		  Vanilla Animals Expanded — Tropical Forest
+	</description>
+</ModMetaData>

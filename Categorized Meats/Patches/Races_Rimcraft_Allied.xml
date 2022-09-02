@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change [Ry]Rimcraft Allied Races -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>[Ry]Rimcraft Allied Races</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Elf -->
+    <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[ 
+	  	  defName="WoW_Nightborne" or 
+	  	  defName="WoW_VoidElf" 
+	  ]/race</xpath> 
+     <value>
+          <useMeatFrom>WoW_BloodElf</useMeatFrom> 
+       </value> 
+    </li> 
+
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

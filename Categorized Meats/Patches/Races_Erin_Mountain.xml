@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Erin's Mountain Animals -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Erin's Mountain Animals</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Mutton -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Argali" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Sheep</useMeatFrom>
+      </value>
+   </li>
+	
+
+<!-- Feline -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Snow_leopard" or
+	  	  defName="Pallas_cat" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Rodent -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Pika" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>GuineaPig</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

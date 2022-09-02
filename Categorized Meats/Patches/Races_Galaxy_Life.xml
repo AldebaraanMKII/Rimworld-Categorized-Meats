@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Galaxy Life -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Galaxy Life</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Reptile -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Nightstalker" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+
+<!-- Feline -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Devilstalker" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Pork -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Fluffin"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Pig</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+<!-- Bird -->
+   <!-- <li Class="PatchOperationAdd"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="Tukiri"  -->
+	  <!-- ]/race</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Cassowary</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

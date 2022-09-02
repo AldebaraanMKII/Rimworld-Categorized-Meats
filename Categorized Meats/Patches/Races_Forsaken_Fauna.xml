@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Forsakens: Fauna -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Forsakens: Fauna</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+	
+<!-- Reptile -->
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="FO_RBehemoth" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Feline -->
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="FO_DuskProwler" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Cougar</useMeatFrom>
+      </value>
+   </li>
+	
+	
+<!-- Rodent -->
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="FO_RMurkling" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>GuineaPig</useMeatFrom>
+      </value>
+   </li>
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

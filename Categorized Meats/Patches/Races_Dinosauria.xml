@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Dinosauria-->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Dinosauria</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+	
+<!-- Reptile -->
+   <li Class="PatchOperationRemove">
+	  <success>Always</success>
+      <xpath>/Defs/ThingDef[
+	  	  defName="TyrannosaurusRex" or
+	  	  defName="Yutyrannus" or
+	  	  defName="Carnotaurus" or
+	  	  defName="Allosaurus" or
+	  	  defName="Spinosaurus" or
+	  	  defName="Baryonyx" or
+	  	  defName="Ankylosaurus" or
+	  	  defName="Minmi" or
+	  	  defName="Brachiosaurus" or
+	  	  defName="Brontosaurus" or
+	  	  defName="Diplodocus" or
+	  	  defName="Magyarosaurus" or
+	  	  defName="Utahraptor" or
+	  	  defName="Dakotaraptor" or
+	  	  defName="Dilophosaurus" or
+	  	  defName="Velociraptor" or
+	  	  defName="Compsognathus" or
+	  	  defName="Gallimimus" or
+	  	  defName="Iguanodon" or
+	  	  defName="Parasaur" or
+	  	  defName="Corythosaurus" or
+	  	  defName="Therizinosaurus" or
+	  	  defName="Pachycephalosaurus" or
+	  	  defName="Stygimoloch" or
+	  	  defName="Dryosaurus" or
+	  	  defName="Stegosaurus" or
+	  	  defName="Triceratops" or
+	  	  defName="Protoceratops" 
+		]/race/meatLabel</xpath> 
+   </li>
+   
+   
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="TyrannosaurusRex" or
+	  	  defName="Yutyrannus" or
+	  	  defName="Carnotaurus" or
+	  	  defName="Allosaurus" or
+	  	  defName="Spinosaurus" or
+	  	  defName="Baryonyx" or
+	  	  defName="Ankylosaurus" or
+	  	  defName="Minmi" or
+	  	  defName="Brachiosaurus" or
+	  	  defName="Brontosaurus" or
+	  	  defName="Diplodocus" or
+	  	  defName="Magyarosaurus" or
+	  	  defName="Utahraptor" or
+	  	  defName="Dakotaraptor" or
+	  	  defName="Dilophosaurus" or
+	  	  defName="Velociraptor" or
+	  	  defName="Compsognathus" or
+	  	  defName="Gallimimus" or
+	  	  defName="Iguanodon" or
+	  	  defName="Parasaur" or
+	  	  defName="Corythosaurus" or
+	  	  defName="Therizinosaurus" or
+	  	  defName="Pachycephalosaurus" or
+	  	  defName="Stygimoloch" or
+	  	  defName="Dryosaurus" or
+	  	  defName="Stegosaurus" or
+	  	  defName="Triceratops" or
+	  	  defName="Protoceratops" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Tortoise</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	
+<!-- Bird -->
+   <li Class="PatchOperationRemove">
+	  <success>Always</success>
+      <xpath>/Defs/ThingDef[
+	  	  defName="Gigantoraptor" or
+	  	  defName="Deinocheirus" or
+	  	  defName="Quetzalcoatlus" or
+	  	  defName="Pteranodon" 
+		]/race/meatLabel</xpath> 
+   </li>
+   
+   <li Class="PatchOperationAdd">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Gigantoraptor" or
+	  	  defName="Deinocheirus" or
+	  	  defName="Quetzalcoatlus" or
+	  	  defName="Pteranodon" 
+	  ]/race</xpath>
+      <value>
+         <useMeatFrom>Cassowary</useMeatFrom>
+      </value>
+   </li>
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

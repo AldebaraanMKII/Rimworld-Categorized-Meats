@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Rimcraft -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>[Ry]Rimcraft</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Elf -->
+   <li Class="PatchOperationAdd">
+      <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName = "WoW_BloodElf"]/race</xpath> 
+      <value>
+         <meatLabel>elf meat</meatLabel>
+      </value>
+   </li>
+   
+    <li Class="PatchOperationAdd">
+	  <xpath>Defs/AlienRace.ThingDef_AlienRace[ 
+	  	  defName="WoW_ForsakenHighElf" or 
+	  	  defName="WoW_ForsakenNightElf" or
+	  	  defName="WoW_HighElf" or
+	  	  defName="WoW_NightElf" 
+	  ]/race</xpath> 
+     <value>
+          <useMeatFrom>WoW_BloodElf</useMeatFrom> 
+       </value> 
+    </li> 
+
+	
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+<!-- Change Devilstrand Animals -->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Devilstrand Animals</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+<!-- Goat -->
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="ATK_Devilbex" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Goat</useMeatFrom>
+      </value>
+   </li>
+   
+   
+	
+<!-- Hare -->
+   <!-- <li Class="PatchOperationReplace"> -->
+	  <!-- <xpath>Defs/ThingDef[ -->
+	  	  <!-- defName="ATK_Devilhare"  -->
+	  <!-- ]/race/useMeatFrom</xpath> -->
+      <!-- <value> -->
+         <!-- <useMeatFrom>Hare</useMeatFrom> -->
+      <!-- </value> -->
+   <!-- </li> -->
+   
+   
+<!-- Beef -->
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="ATK_Devilyak" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Cow</useMeatFrom>
+      </value>
+   </li>
+   
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>
