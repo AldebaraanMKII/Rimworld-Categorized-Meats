@@ -28,7 +28,7 @@
 	  	  defName="Devilstalker" 
 	  ]/race</xpath>
       <value>
-         <useMeatFrom>Cougar</useMeatFrom>
+         <useMeatFrom>Cat</useMeatFrom>
       </value>
    </li>
 	

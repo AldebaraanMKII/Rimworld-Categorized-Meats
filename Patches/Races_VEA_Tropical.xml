@@ -45,7 +45,7 @@
 	  	  defName="AEXP_Tiger" 
 	  ]/race</xpath>
       <value>
-         <useMeatFrom>Cougar</useMeatFrom>
+         <useMeatFrom>Cat</useMeatFrom>
       </value>
    </li>
 	

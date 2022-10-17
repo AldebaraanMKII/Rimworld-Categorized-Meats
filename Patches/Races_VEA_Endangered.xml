@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Vanilla Animals Expanded — Endangered</li>
+    </mods>
+	<match Class="PatchOperationSequence">
+	<operations>
+	
+	
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AEXP_Bonobo" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Monkey</useMeatFrom>
+      </value>
+   </li>
+	
+
+
+
+	
+	</operations>
+	</match>
+</Operation>
+</Patch>

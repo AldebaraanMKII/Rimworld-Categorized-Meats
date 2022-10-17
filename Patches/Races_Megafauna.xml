@@ -115,7 +115,7 @@
 	  	  defName="Smilodon" 
 	  ]/race/useMeatFrom</xpath>
       <value>
-         <useMeatFrom>Cougar</useMeatFrom>
+         <useMeatFrom>Cat</useMeatFrom>
       </value>
    </li>
 	
@@ -159,6 +159,15 @@
 	  <xpath>Defs/ThingDef[
 	  	  defName="Josephoartigasia"
 	  ]/race</xpath>
+      <value>
+         <useMeatFrom>GuineaPig</useMeatFrom>
+      </value>
+   </li>
+   
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="Castoroides"
+	  ]/race/useMeatFrom</xpath>
       <value>
          <useMeatFrom>GuineaPig</useMeatFrom>
       </value>

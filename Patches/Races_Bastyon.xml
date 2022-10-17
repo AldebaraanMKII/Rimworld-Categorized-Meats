@@ -29,7 +29,7 @@
 	  	  defName="Bast_Ethereal_Lion" 
 	  ]/race</xpath>
       <value>
-         <useMeatFrom>Cougar</useMeatFrom>
+         <useMeatFrom>Cat</useMeatFrom>
       </value>
    </li>
 	

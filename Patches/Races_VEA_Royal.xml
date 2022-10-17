@@ -2,47 +2,50 @@
 
 <Patch>
 
-<!-- Change Forsakens: Fauna -->
 
 <Operation Class="PatchOperationFindMod">
     <mods>
-        <li>Forsakens: Fauna</li>
+        <li>Vanilla Animals Expanded — Royal Animals</li>
     </mods>
 	<match Class="PatchOperationSequence">
 	<operations>
 	
 	
-<!-- Reptile -->
-   <li Class="PatchOperationAdd">
+   <li Class="PatchOperationReplace">
 	  <xpath>Defs/ThingDef[
-	  	  defName="FO_RBehemoth" 
-	  ]/race</xpath>
+	  	  defName="VAERoy_Orangutan" 
+	  ]/race/useMeatFrom</xpath>
       <value>
-         <useMeatFrom>Tortoise</useMeatFrom>
+         <useMeatFrom>Monkey</useMeatFrom>
       </value>
    </li>
 	
+
 	
-<!-- Feline -->
    <li Class="PatchOperationReplace">
 	  <xpath>Defs/ThingDef[
-	  	  defName="FO_DuskProwler" 
+	  	  defName="VAERoy_Peacock" or
+	  	  defName="VAERoy_Pheasant" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Chicken</useMeatFrom>
+      </value>
+   </li>
+	
+
+	
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="VAERoy_RoyalTiger" 
 	  ]/race/useMeatFrom</xpath>
       <value>
          <useMeatFrom>Cat</useMeatFrom>
       </value>
    </li>
 	
-	
-<!-- Rodent -->
-   <li Class="PatchOperationReplace">
-	  <xpath>Defs/ThingDef[
-	  	  defName="FO_RMurkling" 
-	  ]/race/useMeatFrom</xpath>
-      <value>
-         <useMeatFrom>GuineaPig</useMeatFrom>
-      </value>
-   </li>
+
+
+
 	
 	</operations>
 	</match>

@@ -74,7 +74,7 @@
 	  	  defName="WoW_Animal_Nightsaber"
 	  ]/race</xpath> 
      <value>
-          <useMeatFrom>Cougar</useMeatFrom> 
+          <useMeatFrom>Cat</useMeatFrom> 
        </value> 
     </li> 
 

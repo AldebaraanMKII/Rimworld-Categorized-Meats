@@ -3,10 +3,15 @@
 <Patch>
 <Operation Class="PatchOperationFindMod">
     <mods>
-        <li>Megafauna</li>
+        <li>Alpha Animals</li>
     </mods>
 	<match Class="PatchOperationSequence">
 	<operations>
+	
+	
+<!-- General removal -->
+	
+	
 <!-- Fox -->
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
@@ -22,23 +27,42 @@
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
 	    defName="AA_ArcticLion" or
-	    defName="AA_PhoenixOwlcat" or
-	    defName="AA_SandLion"
+	    defName="AA_PhoenixOwlcat"
 		]/race</xpath>
 		<value>
-		  <useMeatFrom>Cougar</useMeatFrom>
+		  <useMeatFrom>Cat</useMeatFrom>
 		</value>
 	</li>
-		
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	    defName="AA_FrostLynx" or
+	    defName="AA_SandLion" or
+	    defName="AA_Genix"
+		]/race/useMeatFrom</xpath>
+		<value>
+		  <useMeatFrom>Cat</useMeatFrom>
+		</value>
+	</li>
 
 		
 		
 <!-- Beef -->
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
-	    defName="AA_ChameleonYak" or
-	    defName="gigantelope" 
+	    defName="AA_Gigantelope" or
+	    defName="AA_Bobeene" 
 		]/race</xpath>
+		<value>
+		  <useMeatFrom>Cow</useMeatFrom>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	    defName="AA_ChameleonYak" or
+	    defName="AA_Radyak" 
+		]/race/useMeatFrom</xpath>
 		<value>
 		  <useMeatFrom>Cow</useMeatFrom>
 		</value>
@@ -52,11 +76,14 @@
 	  	  defName="AA_RoughPlatedMonitor" 
 		]/race/meatLabel</xpath>
 	</li>
-	
+		  
 	<li Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[
 	  	  defName="AA_CrescendoAnole" or
 	  	  defName="AA_Erin" or
+	  	  defName="AA_DecayDrake" or
+	  	  defName="AA_Lockjaw" or
+	  	  defName="AA_PedigreedRaptor" or
 	  	  defName="AA_RayHound" 
 		]/race/useMeatFrom</xpath>
 		<value>
@@ -66,8 +93,6 @@
 	
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
-	  	  defName="AA_DecayDrake" or
-	  	  defName="AA_Lockjaw" or
 	  	  defName="AA_Razorjack" or
 	  	  defName="AA_RoughPlatedMonitor" 
 		]/race</xpath>
@@ -79,13 +104,27 @@
 
 
 <!-- Bird -->
+	<li Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_MeadowAve" 
+		]/race/meatLabel</xpath>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_NightAve" or
+	  	  defName="AA_RoyalAve" or
+	  	  defName="AA_FrostAve" or
+	  	  defName="AA_DesertAve" 
+		]/race/useMeatFrom</xpath>
+		<value>
+		  <useMeatFrom>Cassowary</useMeatFrom>
+		</value>
+	</li>
+	
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
-	  	  defName="AA_DesertAve" or
-	  	  defName="AA_FrostAve" or
-	  	  defName="AA_MeadowAve" or
-	  	  defName="AA_RoyalAve" or
-	  	  defName="AA_NightAve" 
+	  	  defName="AA_MeadowAve"
 		]/race</xpath>
 		<value>
 		  <useMeatFrom>Cassowary</useMeatFrom>
@@ -109,10 +148,22 @@
 <!-- Rodent -->
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[
-	  	  defName="AA_DuskRat" or
-	  	  defName="AA_FissionMouse" or
 	  	  defName="AA_Groundrunner" 
 		]/race</xpath>
+		<value>
+		  <useMeatFrom>GuineaPig</useMeatFrom>
+		</value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_FissionMouseSecond" or
+	  	  defName="AA_FissionMouseThird" or
+	  	  defName="PoisonRat" or
+	  	  defName="AA_DuskRat" or
+	  	  defName="AA_FissionMouse" or
+	  	  defName="AA_Mantrap" 
+		]/race/useMeatFrom</xpath>
 		<value>
 		  <useMeatFrom>GuineaPig</useMeatFrom>
 		</value>
@@ -134,16 +185,6 @@
 
 
 <!-- Hare -->
-   <li Class="PatchOperationAdd">
-	  <xpath>Defs/ThingDef[
-	  	  defName="AA_Radyak" 
-	  ]/race</xpath>
-      <value>
-         <useMeatFrom>Hare</useMeatFrom>
-      </value>
-   </li>
-
-
 
 <!-- Canine -->
    <li Class="PatchOperationAdd">
@@ -155,6 +196,16 @@
          <useMeatFrom>Wolf_Timber</useMeatFrom>
       </value>
    </li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_Skiphound" or
+	  	  defName="AA_OcularNightling" 
+		]/race/useMeatFrom</xpath>
+		<value>
+		  <useMeatFrom>Wolf_Timber</useMeatFrom>
+		</value>
+	</li>
    
 
 
@@ -162,13 +213,21 @@
    <li Class="PatchOperationAdd">
 	  <xpath>Defs/ThingDef[
 	  	  defName="AA_ShockGoat" or
-	  	  defName="AA_SpinedGow" or
-	  	  defName="AA_NightRam" 
+	  	  defName="AA_SpinedGow" 
 	  ]/race</xpath>
       <value>
          <useMeatFrom>Goat</useMeatFrom>
       </value>
    </li>
+   
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[
+	  	  defName="AA_NightRam" 
+		]/race/useMeatFrom</xpath>
+		<value>
+		  <useMeatFrom>Goat</useMeatFrom>
+		</value>
+	</li>
    
 
 

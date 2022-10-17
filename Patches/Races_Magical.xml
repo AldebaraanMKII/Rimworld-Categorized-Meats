@@ -29,7 +29,9 @@
 	  <xpath>Defs/ThingDef[
 	  	  defName="MM_Basilisk" or 
 	  	  defName="MM_Kappa" or 
-	  	  defName="MM_LesserWyvern" 
+	  	  defName="MM_LesserWyvern" or
+	  	  defName="MM_Salamander" or
+	  	  defName="MM_Tlilcoatl" 
 	  ]/race/useMeatFrom</xpath>
       <value>
          <useMeatFrom>Tortoise</useMeatFrom>
@@ -78,7 +80,7 @@
 	  	  defName="MM_Manticore" 
 	  ]/race</xpath>
       <value>
-         <useMeatFrom>Cougar</useMeatFrom>
+         <useMeatFrom>Cat</useMeatFrom>
       </value>
    </li>
 	

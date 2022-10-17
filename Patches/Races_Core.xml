@@ -13,7 +13,6 @@
 				<statBases>
 					<MarketValue>0</MarketValue>
 				</statBases>
-				<menuHidden>true</menuHidden>
 				<tradeability>None</tradeability>
 			</ThingDef>
 		</value>
@@ -210,7 +209,7 @@
 <!-- Feline -->
    <Operation Class="PatchOperationAdd">
       <xpath>/Defs/ThingDef[
-	  defName = "BigCatThingBase"
+	  defName = "Cat"
 	  ]/race</xpath> 
       <value>
          <meatLabel>feline meat</meatLabel>
@@ -221,10 +220,10 @@
 	  <xpath>Defs/ThingDef[
 	  	  defName="Panther" or
 	  	  defName="Lynx" or
-	  	  defName="Cat" 
+	  	  defName="Cougar" 
 	  ]/race</xpath>
       <value>
-         <useMeatFrom>Cougar</useMeatFrom>
+         <useMeatFrom>Cat</useMeatFrom>
       </value>
    </Operation>
 

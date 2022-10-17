@@ -2,19 +2,29 @@
 
 <Patch>
 
-<!-- Change Vanilla Animals Expanded — Desert -->
 
 <Operation Class="PatchOperationFindMod">
     <mods>
-        <li>Vanilla Animals Expanded — Desert</li>
+        <li>Vanilla Animals Expanded — Extreme Desert</li>
     </mods>
 	<match Class="PatchOperationSequence">
 	<operations>
 	
-<!-- Reptile -->
+	
    <li Class="PatchOperationReplace">
 	  <xpath>Defs/ThingDef[
-	  	  defName="AEXP_GilaMonster" 
+	  	  defName="AEXP_Camel" 
+	  ]/race/useMeatFrom</xpath>
+      <value>
+         <useMeatFrom>Alpaca</useMeatFrom>
+      </value>
+   </li>
+	
+
+	
+   <li Class="PatchOperationReplace">
+	  <xpath>Defs/ThingDef[
+	  	  defName="AEXP_Rattlesnake" 
 	  ]/race/useMeatFrom</xpath>
       <value>
          <useMeatFrom>Tortoise</useMeatFrom>
@@ -22,18 +32,8 @@
    </li>
 	
 
-<!-- Feline -->
-   <li Class="PatchOperationAdd">
-	  <xpath>Defs/ThingDef[
-	  	  defName="AEXP_Lion" 
-	  ]/race</xpath>
-      <value>
-         <useMeatFrom>Cat</useMeatFrom>
-      </value>
-   </li>
-	
-	
-	
+
+
 	
 	</operations>
 	</match>
